@@ -29,21 +29,36 @@ namespace ColegioForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.gridCursos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCursos)).BeginInit();
             this.SuspendLayout();
             // 
-            // Form1
+            // gridCursos
+            // 
+            this.gridCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridCursos.Location = new System.Drawing.Point(278, 85);
+            this.gridCursos.Name = "gridCursos";
+            this.gridCursos.Size = new System.Drawing.Size(240, 268);
+            this.gridCursos.TabIndex = 0;
+            // 
+            // GuiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(556, 450);
-            this.Name = "Form1";
+            this.Controls.Add(this.gridCursos);
+            this.Name = "GuiForm";
             this.Text = "Colegio Primavera";
+            this.Load += new System.EventHandler(this.GuiForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridCursos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView gridCursos;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ColegioForms.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace ColegioForms
         public GuiForm()
         {
             InitializeComponent();
+        }
+
+        private void GuiForm_Load(object sender, EventArgs e)
+        {
+            //el codigo que debemos establecer aca 
+            //se ejecutara al iniciar la ventana
+
+            //Primero voy a crear la conexion el contextBD creada
+
+            ContextBD bd = new ContextBD();
+
+            gridCursos.DataSource = bd.Cursos.ToList();
         }
     }
 }
