@@ -15,7 +15,7 @@ namespace ColegioForms.Clases
         [StringLength(50)]
         public string nombre { get; set; }
 
-        public DateTime? nacimiento { get; set; }
+        public DateTime nacimiento { get; set; }
 
         public int idCurso { get; set; }
 

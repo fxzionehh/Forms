@@ -29,17 +29,29 @@ namespace ColegioForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridCursos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCursos)).BeginInit();
+            this.gridAlumnos = new System.Windows.Forms.DataGridView();
+            this.comboProfesores = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridCursos
+            // gridAlumnos
             // 
-            this.gridCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridCursos.Location = new System.Drawing.Point(278, 85);
-            this.gridCursos.Name = "gridCursos";
-            this.gridCursos.Size = new System.Drawing.Size(240, 268);
-            this.gridCursos.TabIndex = 0;
+            this.gridAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridAlumnos.Location = new System.Drawing.Point(54, 249);
+            this.gridAlumnos.Name = "gridAlumnos";
+            this.gridAlumnos.Size = new System.Drawing.Size(451, 129);
+            this.gridAlumnos.TabIndex = 0;
+            this.gridAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCursos_CellContentClick);
+            // 
+            // comboProfesores
+            // 
+            this.comboProfesores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboProfesores.FormattingEnabled = true;
+            this.comboProfesores.Location = new System.Drawing.Point(344, 157);
+            this.comboProfesores.Name = "comboProfesores";
+            this.comboProfesores.Size = new System.Drawing.Size(121, 21);
+            this.comboProfesores.TabIndex = 1;
+            this.comboProfesores.SelectedIndexChanged += new System.EventHandler(this.comboProfesores_SelectedIndexChanged);
             // 
             // GuiForm
             // 
@@ -47,18 +59,20 @@ namespace ColegioForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(556, 450);
-            this.Controls.Add(this.gridCursos);
+            this.Controls.Add(this.comboProfesores);
+            this.Controls.Add(this.gridAlumnos);
             this.Name = "GuiForm";
             this.Text = "Colegio Primavera";
             this.Load += new System.EventHandler(this.GuiForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAlumnos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gridCursos;
+        private System.Windows.Forms.DataGridView gridAlumnos;
+        private System.Windows.Forms.ComboBox comboProfesores;
     }
 }
 

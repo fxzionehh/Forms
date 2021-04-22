@@ -27,7 +27,23 @@ namespace ColegioForms
 
             ContextBD bd = new ContextBD();
 
-            gridCursos.DataSource = bd.Cursos.ToList();
+            gridAlumnos.DataSource = bd.Alumnos.ToList();
+            gridAlumnos.Columns[2].Visible = true;
+            
+
+
+
+        }
+
+        private void gridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboProfesores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            comboProfesores.DisplayMember = "Nombre";
         }
     }
 }
