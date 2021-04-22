@@ -27,9 +27,6 @@ namespace ColegioForms
             gridAlumnos.DataSource = bd.Alumnos.ToList();
             gridAlumnos.Columns[4].Visible = false;
 
-
-            comboCursos.DisplayMember = "Nombre";
-
         }
 
         private void gridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,7 +36,7 @@ namespace ColegioForms
 
         private void comboProfesores_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            comboCursos.DisplayMember = "Nombre";
         }
     }
 }
